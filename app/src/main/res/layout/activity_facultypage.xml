@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:background="#000000"
+
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.ramyoogesh.android.courseregistration.MainActivity">
+
+<LinearLayout android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+android:orientation="vertical"
+>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter seats for Course 1"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter start time "
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText2"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter end time "
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText3"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"/>
+    <Button
+        android:text="Update "
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#4d545b"
+        android:id="@+id/button"
+       />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter seats for Course 2"
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText4"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter start time "
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText5"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter end time "
+        android:layout_gravity="center"
+        android:textSize="30dp"
+        android:textColor="#707070"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.3"
+        android:inputType="number"
+        android:background="#e7e7e7"
+        android:ems="10"
+        android:id="@+id/editText6"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+      />
+    <Button
+        android:text="Update "
+        android:textSize="25dp"
+        android:layout_width="match_parent"
+        android:background="#4d545b"
+        android:id="@+id/button2"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+</ScrollView>
