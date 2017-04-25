@@ -1,5 +1,6 @@
 package com.ramyoogesh.android.courseregistration;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -19,7 +20,7 @@ public class Studentactivity extends AppCompatActivity {
     private DatabaseReference mDatabaseReference1;
      private ChildEventListener mChildEventListener;
     private ChildEventListener mChildEventListener1;
-    Button b1,b2;
+    Button b1,b2,b3;
     public int e,bcd,st1,str2,g,f,d,j,u,a,z;
 
     @Override
@@ -34,6 +35,7 @@ public class Studentactivity extends AppCompatActivity {
 
         b1=(Button )findViewById(R.id.button);
         b2=(Button)findViewById(R.id.button2);
+        b3=(Button)findViewById(R.id.button3);
 
 
         mChildEventListener=new ChildEventListener() {
@@ -185,6 +187,25 @@ public class Studentactivity extends AppCompatActivity {
 
             }
         });
+
+
+
+
+
+
+        b3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent nw=new Intent(Studentactivity.this,Timetablestudent.class);
+                startActivity(nw);
+
+
+
+
+            }
+        });
+
 
 
     }
