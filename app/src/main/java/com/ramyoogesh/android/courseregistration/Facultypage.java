@@ -15,7 +15,7 @@ public class Facultypage extends AppCompatActivity {
 
     Button b1,b2,b3;
     EditText e1,e2,e3,e4,e5,e6;
-    private int a,b,c,d,g,i,u=0;
+    private int a,b,c,d,g,i,u=0,flag=1;
 
     private FirebaseDatabase mFirebaseDatabase;
     private DatabaseReference mDatabaseReference[]=new DatabaseReference[20];
@@ -62,12 +62,29 @@ public class Facultypage extends AppCompatActivity {
 
                     for(i=u;i<=u;i++) {
 
+                        if(i<20) {
+                            mDatabaseReference[i] = mFirebaseDatabase.getReference().child("Course " + i);
+                            mDatabaseReference[i].push().setValue(newval);
+                        }
+                        else
+                        {flag=0;
+                            break;
 
-                        mDatabaseReference[i] = mFirebaseDatabase.getReference().child("Course "+i);
-                        mDatabaseReference[i].push().setValue(newval);
+                        }
+
                     }
 
-                    Toast.makeText(Facultypage.this, "Your value is updated  Successfully ! ", Toast.LENGTH_SHORT).show();
+                    if(flag==0)
+                    {
+                        Toast.makeText(Facultypage.this, "Course Limit Reached !!", Toast.LENGTH_SHORT).show();
+                    }
+
+                    else
+                    {
+                        Toast.makeText(Facultypage.this, "Your value is updated  Successfully ! ", Toast.LENGTH_SHORT).show();
+                    }
+
+
 
                     //   Intent i = new Intent(Facultypage.this,MainActivity.class);
                     ///   startActivity(i);
