@@ -13,13 +13,18 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class Facultypage extends AppCompatActivity {
 
-    Button b1,b2;
+    Button b1,b2,b3;
     EditText e1,e2,e3,e4,e5,e6;
-    private int a,b,c,d,g;
+    private int a,b,c,d,g,i,u=0;
 
     private FirebaseDatabase mFirebaseDatabase;
-    private DatabaseReference mDatabaseReference;
+    private DatabaseReference mDatabaseReference[]=new DatabaseReference[20];
     private DatabaseReference mDatabaseReference1;
+
+
+
+
+
 
 
     @Override
@@ -27,67 +32,51 @@ public class Facultypage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_facultypage);
 
-
-        b1=(Button)findViewById(R.id.button);
         b2=(Button)findViewById(R.id.button2);
 
-        e1=(EditText)findViewById(R.id.editText);
+
+        e1=(EditText)findViewById(R.id.editText1);
         e2=(EditText)findViewById(R.id.editText2);
         e3=(EditText)findViewById(R.id.editText3);
 
-        e4=(EditText)findViewById(R.id.editText4);
-        e5=(EditText)findViewById(R.id.editText5);
-        e6=(EditText)findViewById(R.id.editText6);
 
 
         mFirebaseDatabase=FirebaseDatabase.getInstance();
 
-        mDatabaseReference=mFirebaseDatabase.getReference().child("Course");
-        mDatabaseReference1=mFirebaseDatabase.getReference().child("Course2");
-
-
-        b1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                 a = Integer.parseInt(e1.getText().toString());
-                b = Integer.parseInt(e2.getText().toString());
-                c = Integer.parseInt(e3.getText().toString());
-
-               Valuestore newval= new Valuestore(a,b,c);
-
-                mDatabaseReference.push().setValue(newval);
-
-                Toast.makeText(Facultypage.this, "Your value is updated ! ", Toast.LENGTH_SHORT).show();
+      //  mDatabaseReference=mFirebaseDatabase.getReference().child("Course");
+       // mDatabaseReference1=mFirebaseDatabase.getReference().child("Course2");
 
 
 
 
-            }
-        });
+            b2.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+
+                    a = Integer.parseInt(e1.getText().toString());
+                    b = Integer.parseInt(e2.getText().toString());
+                    c = Integer.parseInt(e3.getText().toString());
+
+                    Valuestore newval= new Valuestore(a,b,c);
+                    u=u+1;
+
+                    for(i=u;i<=u;i++) {
 
 
-        b2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+                        mDatabaseReference[i] = mFirebaseDatabase.getReference().child("Course "+i);
+                        mDatabaseReference[i].push().setValue(newval);
+                    }
 
-                d = Integer.parseInt(e4.getText().toString());
-                g = Integer.parseInt(e5.getText().toString());
+                    Toast.makeText(Facultypage.this, "Your value is updated  Successfully ! ", Toast.LENGTH_SHORT).show();
 
-                Valuestore neee=new Valuestore(d,g);
-
-                mDatabaseReference1.push().setValue(neee);
+                    //   Intent i = new Intent(Facultypage.this,MainActivity.class);
+                    ///   startActivity(i);
 
 
-                Toast.makeText(Facultypage.this, "Your value is updated  Successfullyy ! ", Toast.LENGTH_SHORT).show();
-
-                Intent i = new Intent(Facultypage.this,MainActivity.class);
-                startActivity(i);
+                }
+            });
 
 
-
-
-            }
-        });
 
 
 
