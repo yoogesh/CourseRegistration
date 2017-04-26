@@ -85,7 +85,7 @@ public class Facultypage extends AppCompatActivity {
                     }
 
 
- /////////helllllllllllllllllllllllllllllllllllloooooooooooooooooooooooooo
+ /////////hellllllllllllllllllllllllllllllllllllooooooooooooooooooooooooooujjjjjjjjjjjjjjjjjjjjjjjj
                     //   Intent i = new Intent(Facultypage.this,MainActivity.class);
                     ///   startActivity(i);
 
